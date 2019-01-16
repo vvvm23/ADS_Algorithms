@@ -43,19 +43,14 @@ def main():
             result = bucket_sort.sort(input_list)
         elif sort_type == 3:
             result = insertion_sort.sort(input_list)
-            pass
         elif sort_type == 4:
             result = merge_sort.sort(input_list)
-            pass
         elif sort_type == 5:
             result = quick_sort.sort(input_list)
-            pass
         elif sort_type == 6:
             result = radix_sort.sort(input_list)
-            pass
         elif sort_type == 7:
             result = selection_sort.sort(input_list)
-            pass
         else:
             print("Error: Unknown sort type!")
             print("Type python main.py --help")
