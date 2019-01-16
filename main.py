@@ -18,45 +18,51 @@ def main():
         print("7: Selection Sort\n")     
         print("input_list:")
         print("Input list is list of comma seperated integers")
+        return 0
     elif nb_arguments == 1:
         print("Error: No arguments provided!")
         print("Type python main.py --help")
+        return 0
     elif nb_arguments == 2:
         print("Error: Too few arguments!")
         print("Type python main.py --help")
+        return 0
     elif nb_arguments > 3:
         print("Error: Too many arguments!")
         print("Type python main.py --help")
+        return 0
     else:   
         sort_type = int(sys.argv[1])
         input_list = list(map(int, sys.argv[2].split(','))) # Does not work for negative numbers yet
 
+        result = []
+
         if sort_type == 1:
-            bubble_sort.sort(input_list)
-            pass
+            result = bubble_sort.sort(input_list)
         elif sort_type == 2:
-            bucket_sort.sort(input_list)
-            pass
+            result = bucket_sort.sort(input_list)
         elif sort_type == 3:
-            insertion_sort.sort(input_list)
+            result = insertion_sort.sort(input_list)
             pass
         elif sort_type == 4:
-            merge_sort.sort(input_list)
+            result = merge_sort.sort(input_list)
             pass
         elif sort_type == 5:
-            quick_sort.sort(input_list)
+            result = quick_sort.sort(input_list)
             pass
         elif sort_type == 6:
-            radix_sort.sort(input_list)
+            result = radix_sort.sort(input_list)
             pass
         elif sort_type == 7:
-            selection_sort.sort(input_list)
+            result = selection_sort.sort(input_list)
             pass
         else:
             print("Error: Unknown sort type!")
             print("Type python main.py --help")
+            return 0
 
-    pass
+        print(result)
+    return 0
 
 if __name__ == "__main__":
     main()
