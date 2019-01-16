@@ -4,9 +4,9 @@ import sys
 import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort
 
 def main():
-    nb_arguments = len(sys.argv)
+    nb_arguments = len(sys.argv) # Gets number of arguments from command line
     
-    if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+    if sys.argv[1] == "-h" or sys.argv[1] == "--help": # Display help
         print("\nUsage: python main.py sort_type input_list\n")
         print("sort_type:")
         print("1: Bubble Sort")            
@@ -17,9 +17,10 @@ def main():
         print("6: Radix Sort")
         print("7: Selection Sort\n")     
         print("input_list:")
-        print("Input list is list of comma seperated integers")
+        print("Input list is list of comma or space seperated integers")
+        print("Eg: 1,2,3,4,5 or 1 2 3 4 5")
         return 0
-    elif nb_arguments == 1:
+    elif nb_arguments == 1: # Check number of arguments 
         print("Error: No arguments provided!")
         print("Type python main.py --help")
         return 0
@@ -27,16 +28,15 @@ def main():
         print("Error: Too few arguments!")
         print("Type python main.py --help")
         return 0
-    elif nb_arguments > 3:
-        print("Error: Too many arguments!")
-        print("Type python main.py --help")
-        return 0
-    else:   
+    else:             
         sort_type = int(sys.argv[1])
-        input_list = list(map(int, sys.argv[2].split(','))) # Does not work for negative numbers yet
+        input_list = []
+        for a in range(2, nb_arguments):
+            input_list = input_list + list(map(int, sys.argv[a].split(',')))
 
         result = []
-
+        # Get sort type
+        # TODO: allow string input
         if sort_type == 1:
             result = bubble_sort.sort(input_list)
         elif sort_type == 2:
@@ -56,6 +56,7 @@ def main():
             print("Type python main.py --help")
             return 0
 
+        # Display result
         print(result)
     return 0
 
