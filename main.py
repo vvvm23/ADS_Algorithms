@@ -1,7 +1,7 @@
 # Import sys for command line arguments
 import sys
 # Import sorts
-import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort
+from ads_sort import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort
 
 def main():
     nb_arguments = len(sys.argv) # Gets number of arguments from command line
