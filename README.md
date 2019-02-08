@@ -51,4 +51,3 @@ The program should also work on Linux however this is untested. Call using pytho
 * Add ability for other developers to make pull requests and easily add their sorts by simply placing a .py file
 * Add timing mechanisms to compare times of different sorts
 * Add educational mode which will step through sorting process with statistics
-* Bogosort
