@@ -1,7 +1,7 @@
 # Import sys for command line arguments
 import sys
 # Import sorts
-from ads_sort import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort
+from ads_sort import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort, HeapSort
 
 def main():
     nb_arguments = len(sys.argv) # Gets number of arguments from command line
@@ -15,7 +15,8 @@ def main():
         print("4: Merge Sort")
         print("5: Quick Sort")
         print("6: Radix Sort")
-        print("7: Selection Sort\n")     
+        print("7: Selection Sort")
+        print("8: Heap Sort\n")     
         print("input_list:")
         print("Input list is list of comma or space seperated integers")
         print("Eg: 1,2,3,4,5 or 1 2 3 4 5")
@@ -51,6 +52,8 @@ def main():
             result = radix_sort.sort(input_list)
         elif sort_type == 7:
             result = selection_sort.sort(input_list)
+        elif sort_type == 8:
+            result = HeapSort.sort(input_list)
         else:
             print("Error: Unknown sort type!")
             print("Type python main.py --help")
