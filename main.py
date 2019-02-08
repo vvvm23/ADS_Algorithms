@@ -1,7 +1,7 @@
 # Import sys for command line arguments
 import sys
 # Import sorts
-from ads_sort import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort, heap_sort
+import bubble_sort, bucket_sort, insertion_sort, merge_sort, quick_sort, radix_sort, selection_sort, heap_sort, bogo_sort
 
 keys = {
     "bubble sort": 1,
