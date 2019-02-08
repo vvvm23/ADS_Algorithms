@@ -11,7 +11,8 @@ keys = {
     "quick sort": 5,
     "radix sort": 6,
     "selection sort": 7,
-    "heap sort": 8
+    "heap sort": 8,
+    "bogo sort": 9
 }
 
 def main():
@@ -68,6 +69,8 @@ def main():
             result = selection_sort.sort(input_list)
         elif sort_type == keys["heap sort"]:
             result = heap_sort.sort(input_list)
+        elif sort_type == keys["bogo sort"]:
+            result = bogo_sort.sort(input_list)
         else:
             print("Error: Unknown sort type!")
             print("Type python main.py --help")
