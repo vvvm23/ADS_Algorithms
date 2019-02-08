@@ -53,7 +53,7 @@ def main():
         elif sort_type == 7:
             result = selection_sort.sort(input_list)
         elif sort_type == 8:
-            result = HeapSort.sort(input_list)
+            result = heap_sort.sort(input_list)
         else:
             print("Error: Unknown sort type!")
             print("Type python main.py --help")
