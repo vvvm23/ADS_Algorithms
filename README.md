@@ -18,6 +18,8 @@ The sorting types are as follows:
     5: Quick Sort
     6: Radix Sort
     7: Selection Sort
+    8: Heap Sort
+    9: Bogo Sort
 
 And input list is of either of the two formats:
 
@@ -45,7 +47,6 @@ The program should also work on Linux however this is untested. Call using pytho
 ---
 ## ToDo
 
-* Implement passing sort_type as a string
 * Implement error checking eg. when empty lists are passed or non-lists
 * Add ability for other developers to make pull requests and easily add their sorts by simply placing a .py file
 * Add timing mechanisms to compare times of different sorts
